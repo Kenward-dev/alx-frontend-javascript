@@ -50,14 +50,14 @@ function printTeacher({ firstName, lastName }: { firstName: string;lastName: str
 console.log(printTeacher({ firstName: "John", lastName: "Doe" }));
 console.log(printTeacher({ firstName: "Mary", lastName: "Smith" })); 
 
-interface StudentConstructor {
-  firstName: string;
-  lastName: string;
-}
-
 interface StudentClassInterface {
   workOnHomework(): string;
   displayName(): string;
+}
+
+interface StudentConstructor {
+  firstName: string;
+  lastName: string;
 }
 
 class StudentClass implements StudentClassInterface {
@@ -79,5 +79,5 @@ class StudentClass implements StudentClassInterface {
 }
 
 const student = new StudentClass("John", "Doe");
-console.log(student.displayName()); 
-console.log(student.workOnHomework());
+console.log(student.workOnHomework()); 
+console.log(student.displayName());    
